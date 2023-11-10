@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Burger Science</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleInicial.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='Burguer_Science_logoNova.png') }}" type="image/png">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img id="logo-inicio" src="{{ url_for('static', filename='Burguer_Science_logoNova.png') }}" alt="Logo da empresa">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contato</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-profile">
+            <p>Bem-vindo, Nome do Usuário</p>
+        </div>
+    </header>
+    <section id="home">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExample" data-slide-to="1"></li>
+                <li data-target="#carouselExample" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='imagem1carrossel.jpg') }}" class="d-block w-100" alt="Delicious Dish 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='imagem2carrossel.jpg') }}" class="d-block w-100" alt="Delicious Dish 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='imagem3carrossel.jpg') }}" class="d-block w-100" alt="Delicious Dish 3">
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <section id="menu" class="section">
+        <h2>Cardápio</h2>
+        <hr class="separator">
+        <h3>Nossos Lanches</h3>
+        <ul class="menu-list">
+            <li>
+                <h3>X-Bacon Java</h3>
+                <a href="{{ url_for('static', filename='imagem1carrossel.jpg') }}" data-lightbox="x-bacon-java" data-title="Delicioso lanche, contendo bacon, extra cheddar e hamburguer de carne bovina com 120g.">
+                    <img src="{{ url_for('static', filename='imagem1carrossel.jpg') }}" alt="X Bacon Java">
+                </a>
+                <p>Delicioso lanche, contendo bacon, extra cheddar e hamburguer de carne bovina com 120g.</p>
+                <span class="price">R$ 33,00</span>
+            </li>
+            <li>
+                <h3>X-Full Stack</h3>
+                <a href="{{ url_for('static', filename='imagem2carrossel.jpg') }}" data-lightbox="x-full-stack" data-title="Lanche mais vendido do nosso cardapio! Com hamburguer de picanha, extra cheddar, tomate e molho full stack.">
+                    <img src="{{ url_for('static', filename='imagem2carrossel.jpg') }}" alt="X Full Stack">
+                </a>
+                <p>Lanche mais vendido do nosso cardapio! Com hamburguer de picanha, extra cheddar, tomate e molho full stack.</p>
+                <span class="price">R$ 45,00</span>
+            </li>
+            <li>
+                <h3>X-Junior</h3>
+                <a href="{{ url_for('static', filename='imagem3carrossel.jpg') }}" data-lightbox="x-junior" data-title="Lanche destinado a crianças com muita fome! Hamburguer 120g e cheddar no esquema.">
+                    <img src="{{ url_for('static', filename='imagem3carrossel.jpg') }}" alt="X Junior">
+                </a>
+                <p>Lanche destinado a crianças com muita fome! Hamburguer 120g e cheddar no esquema.</p>
+                <span class="price">R$ 25,00</span>
+            </li>
+            <li>
+                <h3>Dog Ptyhon</h3>
+                <a href="{{ url_for('static', filename='dogpython.jpeg') }}" data-lightbox="dog-python" data-title="Rapido, gostoso, viciante e com muito ketchup!">
+                    <img src="{{ url_for('static', filename='dogpython.jpeg') }}" alt="Dog Python">
+                </a>
+                <p>Rapido, gostoso, viciante e com muito ketchup!</p>
+                <span class="price">R$ 15,00</span>
+            </li>
+            <li>
+                <h3>X-Pleno</h3>
+                <a href="{{ url_for('static', filename='xpleno.jpeg') }}" data-lightbox="x-pleno" data-title="Hamburguer para fomes médias, com hamburguer de picanha, cheddar, alface e tomate">
+                    <img src="{{ url_for('static', filename='xpleno.jpeg') }}" alt="X Pleno">
+                </a>
+                <p>Hamburguer para fomes médias, com hamburguer de picanha, cheddar, alface e tomate.</p>
+                <span class="price">R$ 30,00</span>
+            </li>
+            <li>
+                <h3>X-Double Bug</h3>
+                <a href="{{ url_for('static', filename='xdoublebug.jpeg') }}" data-lightbox="x-double-bug" data-title="Aquele double X-tudo para voce sair de lá com o buxo cheio, com bacon, carne de picanha, cebola caramelizada e tomate. De dar água na boca!">
+                    <img src="{{ url_for('static', filename='xdoublebug.jpeg') }}" alt="X Double bug">
+                </a>
+                <p>Aquele double X-tudo para voce sair de lá com o buxo cheio, com bacon, carne de picanha, cebola caramelizada e tomate. De dar água na boca!</p>
+                <span class="price">R$ 30,00</span>
+            </li>
+            <li>
+                <h3>X-Estagiario</h3>
+                <a href="{{ url_for('static', filename='xestagiario.jpeg') }}" data-lightbox="x-estagiario" data-title="Aquele lanche basico, porém que supre as necessidades básicas!">
+                    <img src="{{ url_for('static', filename='xestagiario.jpeg') }}" alt="X Estagiario">
+                </a>
+                <p>Aquele lanche basico, porém que supre as necessidades básicas!</p>
+                <span class="price">R$ 20,00</span>
+            </li>
+            <li>
+                <h3>X-C</h3>
+                <a href="{{ url_for('static', filename='xc.jpeg') }}" data-lightbox="x-c" data-title="Lanche criativo, com o molho especial, chamado sharp. Venha descobrir!">
+                    <img src="{{ url_for('static', filename='xc.jpeg') }}" alt="X C">
+                </a>
+                <p>Lanche criativo, com o molho especial, chamado sharp. Venha descobrir!</p>
+                <span class="price">R$ 28,00</span>
+            </li>
+            <li>
+                <h3>X-Senior</h3>
+                <a href="{{ url_for('static', filename='xsenior.jpeg') }}" data-lightbox="x-senior" data-title="Hamburguer suculento e velho de casa. Favorito dos clientes!">
+                    <img src="{{ url_for('static', filename='xsenior.jpeg') }}" alt="X Senior">
+                </a>
+                <p>Hamburguer suculento e velho de casa. Favorito dos clientes!</p>
+                <span class="price">R$ 30,00</span>
+            </li>
+        </ul>
+    </section>
+    <section id="about" class="section">
+        <h2>Sobre Nós</h2>
+        <p>Na Burguer Science, nossa paixão pela programação se une à nossa paixão por hambúrgueres deliciosos. Somos uma equipe de entusiastas de tecnologia que decidiram unir o mundo da programação com a culinária. Desde o primeiro byte até o último pedaço de carne, nossa missão é criar uma experiência única para nossos clientes, combinando o melhor dos dois mundos.</p>
+        <p>Nossa história começa em uma pequena garagem, onde cinco amigos, Renato, Pedro, Victor, Theo e Kevin, se reuniam para programar e cozinhar hambúrgueres no final de semana. A partir desse humilde começo, nasceu a Burguer Science, uma hamburgueria que oferece uma seleção de hambúrgueres exclusivos com nomes e ingredientes relacionados à programação.</p>
+        <p>Na Burguer Science, acreditamos em ingredientes frescos, paixão pela programação e atendimento amigável. Nós amamos o que fazemos e queremos compartilhar essa paixão com você. Venha se juntar a nós para uma experiência única onde o sabor e o código se encontram em harmonia. Seja você um desenvolvedor experiente ou alguém que só quer desfrutar de um bom hambúrguer, estamos aqui para recebê-lo de braços abertos.</p>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contato</h2>
+        <div class="row">
+            <div class="col-md-6">
+              <h4>Informações de Contato</h4>
+              <p>Entre em contato conosco para obter mais informações sobre o nosso restaurante e serviços.</p>
+              <ul>
+                <li><strong>Endereço:</strong> Rua do Restaurante, 123</li>
+                <li><strong>Telefone:</strong> (123) 456-7890</li>
+                <li><strong>Email:</strong> contato@seurestaurante.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Burger Science</p>
+    </footer>
+
+
+    <!-- Adicione os scripts do Bootstrap -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+</body>
+</html>

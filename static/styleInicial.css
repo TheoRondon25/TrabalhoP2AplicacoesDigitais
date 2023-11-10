@@ -1,0 +1,155 @@
+body {
+    background-color: #080808 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #d8d8d8 !important; 
+    margin: 0;
+    padding: 0;
+}
+/* Estilos do carrossel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+.carousel-item img {
+    max-height: 750px; 
+    margin: 0 auto; 
+  }
+.carousel-item img {
+    border: 5px solid #080808;
+    border-radius: 25px;
+  }
+.carousel-control-next button {
+    color: black;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #fff;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos do cabeçalho */
+header.navbar {
+    background-color: #747474 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.navbar-brand img {
+    max-height: 50px; /* Ajuste a altura máxima da logo conforme necessário */
+}
+.navbar-toggler {
+    background-color: #333;
+}
+a.nav-link { 
+    color: #d8d8d8 !important;
+}
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 20px;
+}
+
+.user-profile {
+    text-align: right;
+    padding: 0 20px;
+}
+
+/* Estilos das abas de navegação ativas (opcional) */
+.navbar-nav .nav-item.active a {
+    color: #fa3636 !important; /* Cor da aba ativa */
+    font-weight: bold;
+}
+
+/* Estilos para o nome de usuário (opcional) */
+.user-profile p {
+    color: #d8d8d8;
+    font-weight: bold;
+}
+/* Estilos do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Estilos do cardápio */
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+#logo-inicio {
+    max-width: 200px; 
+}
+section {
+    padding: 20px;
+}
+
+/* css produtos */
+.menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* ou justify-content: space-around; */
+    list-style: none;
+    padding: 0;
+}
+.menu-list li {
+    display: flex;
+    flex-basis: calc(33.3333% - 20px); 
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    width: 200px; /* Ajuste a largura conforme necessário */
+    box-sizing: border-box;
+}
+
+.menu-list li img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+}
+
+.menu-list li h3, .menu-list li p, .menu-list li span.price {
+    margin: 10px 0;
+}
+
+.menu-list li span.price {
+    font-weight: bold;
+    color: #e44d26; /* Cor para destacar o preço, você pode ajustar conforme necessário */
+}
+
+

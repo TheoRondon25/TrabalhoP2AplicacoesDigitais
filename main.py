@@ -12,7 +12,7 @@ def cadastro():
 
 @app.route('/telaInicial', methods=['POST'])
 def telaInicial():
-    return "Você está na tela inicial!"  
+    return render_template('telaInicial.html')  
 
 # Colocar o site no ar 
 if __name__ == '__main__':

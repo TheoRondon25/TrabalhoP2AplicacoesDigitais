@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Burguers Comp - Cadastro</title>
+    <link rel="icon" href="{{ url_for('static', filename='Burguer_Science_logoNova.png') }}" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <title>Burguer Science - Cadastro</title>
 </head>
-<body>
-    <div class="cadastro-container">
-        <h1>Cadastrar</h1>
-        <form action="/telaInicial" method="post">
-            <div class="form-group">
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" required>
-            </div>
-            <div class="form-group">
-                <label for="Senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
+<body style="background-color: #747474;">
+    <div class="main-container">
+        <img id="icon-logo" src="{{ url_for('static', filename='Burguer_Science_logoNova.png') }}" alt="Logo da empresa">
+        <div class="cadastro-container">
+            <h1>Cadastrar</h1>
+            <form action="/telaInicial" method="post">
+                <div class="form-group">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="Senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
